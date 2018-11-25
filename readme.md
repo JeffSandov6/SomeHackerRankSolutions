@@ -1,1 +1,1 @@
-These are some of my hacker rank solutions. I'm only going to upload the ones of level medium, hard, advanced, and expert. Ideally, I'd like to post solutions in multiple languages
+These are some of my hacker rank solutions, (only the ones that passed all test cases). I'm only going to upload the ones of level medium, hard, advanced, and expert. Ideally, I'd like to post solutions in multiple languages, and I'd like to update this repo as much as I can
