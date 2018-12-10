@@ -8,18 +8,13 @@ import java.util.regex.*;
 
 public class Solution {
 
-    static float currLowest, currHighest, median;
-    static int medianCopies;
-
-    
-
     // Complete the activityNotifications function below.
     static int activityNotifications(int[] expenditure, int d) {
         
         int numNotifs = 0;
 
-        //we will use counting sort to solve this
-        //201 bc this is max number of expenditures
+        //we will use counting sort to solve this. 201 is the size bc 200
+        //is the max possible value of any particular expenditure
         int[] countSortArr = new int[201];
 
         
