@@ -28,11 +28,9 @@ class MyQueue<Integer>
     else //isSorted
     {
       s2.push(elem);
-
     }
-
-
   }
+
 
   public void dequeue() //remove elem at front
   {
@@ -65,9 +63,9 @@ class MyQueue<Integer>
     {
       isSorted = false;
     }
-
   }
-
+  
+  
   public Integer peek()
   {
     if(s1.size() == 1)
@@ -87,13 +85,13 @@ class MyQueue<Integer>
     }
   }
 
+
   private void sort()
   {
     while(!s1.empty())
     {
       s2.push(s1.pop());
     }
-
     s1 = (Stack<Integer>) s2.clone();
     s2.clear();
   }
