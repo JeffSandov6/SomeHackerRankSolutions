@@ -32,6 +32,9 @@ public class Solution {
     
   }
 
+  
+  //buildLeft essentially returns an array that says, for some element in arr, say the elem in arr at index 2. 
+  //for all lefts[2] elements to the left of me, i am the smallest
   static int[] buildLeft(long[] arr)
   {
     int[] lefts = new int[arr.length];
@@ -43,7 +46,6 @@ public class Solution {
       {
         indices.pop();
       }
-      //i - (-1 if indices stack is empty, else, top of stack indices - 1)
       lefts[i] = i - (indices.empty() ? -1 : indices.peek()) - 1;
       indices.push(i);
     }
@@ -52,6 +54,10 @@ public class Solution {
 
   }
 
+  
+  //buildRight essentially returns an array that says, for some element in arr, say the elem in arr at index 2. 
+  //for all right[2] elements to the right of me, i am the smallest.
+  //if the value of right[i] is 0, then that means the elem to its right is smaller than the elem in arr[i]
   static int[] buildRight(long[] arr)
   {
     int[] rights = new int[arr.length];
