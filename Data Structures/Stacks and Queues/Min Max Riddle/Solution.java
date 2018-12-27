@@ -14,6 +14,9 @@ public class Solution {
     int[] rights = buildRight(arr);
 
     SortedMap<Long, Integer> numToLen = new TreeMap<>(Collections.reverseOrder());
+    //numToLen map holds the numbers in our array, and the maximum length that they span in the array, where they are the
+    //smallest number, whether to its left or right. this map is also sorted so that the key-value pairs with the highest
+    //key value are the front
     for (int i = 0; i < arr.length; i++) {
       numToLen.put(arr[i], Math.max(numToLen.getOrDefault(arr[i], -1), lefts[i] + rights[i] + 1));
     }
@@ -21,11 +24,17 @@ public class Solution {
     Iterator<Long> iter = numToLen.keySet().iterator();
     long number = iter.next();
     long[] result = new long[arr.length];
+    
     for (int i = 0; i < result.length; i++) {
+      //while the max length that the current number spans is less than the current iteration (i), we must iterate to the 
+      //next possible number that spans a length greater than the current i value
+      //if the current number already does span a length greater than the current i value, then just add this number to
+      //the result array
       while (numToLen.get(number) <= i) {
         number = iter.next();
       }
-
+      
+      //here we add the current greatest number (key) that spans a length greater than current i value
       result[i] = number;
     }
     return result;
