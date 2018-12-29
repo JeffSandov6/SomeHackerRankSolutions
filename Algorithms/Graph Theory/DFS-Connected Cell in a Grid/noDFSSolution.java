@@ -6,9 +6,10 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.regex.*;
 
+
+//i solved this w/out the use of DFS. the other file, Solution.java uses DFS
 public class Solution {
 
-    // Complete the maxRegion function below.
     static int maxRegion(int[][] grid) {
       
       int max = 0;
