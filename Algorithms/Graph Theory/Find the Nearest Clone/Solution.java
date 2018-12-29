@@ -8,16 +8,6 @@ import java.util.regex.*;
 
 public class Solution {
 
-    // Complete the findShortest function below.
-
-    /*
-     * For the unweighted graph, <name>:
-     *
-     * 1. The number of nodes is <name>Nodes.
-     * 2. The number of edges is <name>Edges.
-     * 3. An edge exists between <name>From[i] to <name>To[i].
-     *
-     */
   private static ArrayList<Integer>[] adjacencies;
   private static boolean[] visited;
 
@@ -79,6 +69,8 @@ public class Solution {
 
     return shortestPath;
   }
+    
+    
 
   static int findPathLength(int curNode, long color, long[] ids)
   {
